@@ -1,17 +1,18 @@
 import React from 'react';
-import { Content } from './style';
+import { Content, InfoContainer } from './style';
 import PaymentContainer from './components/form';
-import InfoContainer from './components/info';
-import { Grid } from '@mui/material';
+import Info from './components/info';
+import { Grid, useTheme } from '@mui/material';
 import Paper from '@mui/material/Paper';
-import { PRODUCTS_INFORMATION } from '../../mockData/mock';
 
 const PaymentPage = () => {
+  const theme = useTheme();
+
   return (
     <Content container>
       <Grid item md={6} sm={12} xs={12}>
-        <InfoContainer>
-          <div>{PRODUCTS_INFORMATION}</div>
+        <InfoContainer backgroundColor={[theme.palette.primary.main, theme.palette.primary.dark]}>
+          <Info />
         </InfoContainer>
       </Grid>
       <Grid item md={6} sm={12} xs={12} component={Paper} elevation={6} square>

@@ -2,6 +2,7 @@ const colorScheme = {
   palette: {
     primary: {
       main: '#0797b2',
+      dark: '#114583',
     },
     secondary: {
       light: '#0066ff',

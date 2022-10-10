@@ -1,10 +1,16 @@
 import styled from '@emotion/styled';
-import { IInfoProps } from './interfaces';
+import Divider from '@mui/material/Divider';
 
-export const InfoWrapper = styled.div<IInfoProps>`
+export const InfoWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
   display: flex;
   box-sizing: border-box;
-  background: ${(props) => props.backgroundColor};
+  flex-direction: column;
+`;
+
+export const StyledDivider = styled(Divider)`
+  width: 100%;
+  align-items: flex-start;
+  padding-top: 50px;
 `;

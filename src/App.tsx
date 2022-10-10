@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { StyledApp } from './style';
-import Content from './layoutComponents/Content';
 import PaymentPage from './pages/payment';
+import Content from './layoutComponents/Content';
 
 const App = () => {
   return (
@@ -10,8 +10,7 @@ const App = () => {
       <StyledApp>
         <Content>
           <Routes>
-            <Route path={'/payment'} element={<PaymentPage />} />
-            <Route path={'/'} element={<div>kekekekek</div>} />
+            <Route path={'/'} element={<PaymentPage />} />
           </Routes>
         </Content>
       </StyledApp>

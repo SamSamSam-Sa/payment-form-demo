@@ -1,11 +1,26 @@
 import React from 'react';
 import { InfoWrapper } from './style';
-import { useTheme } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import ProductItem from './components/ProductItem';
+import { PRODUCT_ITEMS } from '../../../../mockData/mock';
+import Typography from '@mui/material/Typography';
+import { StyledDivider } from './style';
 
-const InfoContainer = ({ children }: { children: React.ReactNode }) => {
-  const theme = useTheme();
-
-  return <InfoWrapper backgroundColor={theme.palette.primary.main}>{children}</InfoWrapper>;
+const Info = () => {
+  return (
+    <InfoWrapper>
+      <Grid container direction="row" justifyContent="center" alignItems="center" spacing={1}>
+        {PRODUCT_ITEMS.map((item) => (
+          <ProductItem key={item.title} item={item} />
+        ))}
+      </Grid>
+      <StyledDivider>
+        <Typography variant="h4" color="common.white">
+          {'Total: $20'}
+        </Typography>
+      </StyledDivider>
+    </InfoWrapper>
+  );
 };
 
-export default InfoContainer;
+export default Info;
