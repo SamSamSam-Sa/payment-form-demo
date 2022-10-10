@@ -11,7 +11,7 @@ const ProductItem = (props: IProductItemProps) => {
   const { item } = props;
   return (
     <>
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ height: 150, overflow: 'hidden' }}>
         <CardActionArea component="a" href="#">
           <Card sx={{ display: 'flex' }}>
             <CardMedia
@@ -21,7 +21,7 @@ const ProductItem = (props: IProductItemProps) => {
               alt={item.imageLabel}
             />
             <CardContent sx={{ flex: 1 }}>
-              <Typography component="h2" variant="h5">
+              <Typography component="h4" variant="h5">
                 {item.title}
               </Typography>
               <Typography variant="subtitle1" color="text.secondary">
