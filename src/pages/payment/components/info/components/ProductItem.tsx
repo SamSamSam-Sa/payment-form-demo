@@ -1,37 +1,37 @@
 import React from 'react';
 import CardActionArea from '@mui/material/CardActionArea';
-import Card from '@mui/material/Card/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import { IProductItemProps } from '../interfaces';
+import { StyledCard } from './style';
 
 const ProductItem = (props: IProductItemProps) => {
   const { item } = props;
   return (
     <>
-      <Grid item xs={12} sx={{ height: 150, overflow: 'hidden' }}>
+      <Grid item xs={12} sx={{ overflow: 'hidden' }}>
         <CardActionArea component="a" href="#">
-          <Card sx={{ display: 'flex' }}>
+          <StyledCard sx={{ display: 'flex', background: 'transparent' }}>
             <CardMedia
               component="img"
-              sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+              sx={{ maxWidth: 110, display: { xs: 'none', sm: 'block' } }}
               image={item.image}
               alt={item.imageLabel}
             />
             <CardContent sx={{ flex: 1 }}>
-              <Typography component="h4" variant="h5">
+              <Typography component="h4" variant="h5" color="common.white">
                 {item.title}
               </Typography>
-              <Typography variant="subtitle1" color="text.secondary">
+              <Typography variant="subtitle1" color="common.white">
                 {item.description}
               </Typography>
-              <Typography variant="subtitle1" paragraph>
+              <Typography variant="subtitle1" paragraph color="common.white">
                 {item.price}
               </Typography>
             </CardContent>
-          </Card>
+          </StyledCard>
         </CardActionArea>
       </Grid>
     </>

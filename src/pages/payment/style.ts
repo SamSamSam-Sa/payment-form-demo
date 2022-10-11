@@ -1,20 +1,39 @@
-import styled from '@emotion/styled';
+import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { IInfoProps } from './interfaces';
 
-export const Content = styled(Grid)({
-  position: 'relative',
-}) as typeof Grid;
+export const Content = styled(Grid)(
+  ({ theme }) => `
+  position: relative;
+  ${theme.breakpoints.down('md')} {
+    height: 100vh;
+  }`
+) as typeof Grid;
 
-export const InfoContainer = styled(Box)<IInfoProps>`
+export const InfoContainer = styled(Box)(
+  ({ theme }) => `
   display: flex;
   flex-direction: column;
-  padding: 150px;
+  padding: 130px;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(
     180deg,
-    ${(props) => props.backgroundColor[1]} 0,
-    ${(props) => props.backgroundColor[0]} 100%
+    ${theme.palette.primary.dark} 0,
+    ${theme.palette.primary.main} 100%
   );
-`;
+  ${theme.breakpoints.down('lg')} {
+    padding: 50px;
+  }
+  ${theme.breakpoints.down('md')} {
+    height: 100%;
+  }
+`
+);
+
+export const GridItem = styled(Grid)(
+  `
+  transition: all 0.4s;
+  `
+) as typeof Grid;
