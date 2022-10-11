@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import MaskedInput from 'react-text-mask';
 import TextField from '@mui/material/TextField';
 import { number } from 'card-validator';
-import { absLenght } from '../formatCard';
+import { absLenght } from './formatCard';
 import { CardNumberVerification } from 'card-validator/dist/card-number';
 import { ICreditCardsProps } from '../interfaces';
 import InputAdornment from '@mui/material/InputAdornment';

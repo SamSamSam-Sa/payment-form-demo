@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
-import { IProductItemProps } from '../interfaces';
+import { IProductItemProps } from './interfaces';
 import { StyledCard } from './style';
 
 const ProductItem = (props: IProductItemProps) => {

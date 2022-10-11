@@ -1,6 +1,6 @@
 import React from 'react';
 import { PaymentWrapper, StyledDivider } from './style';
-import { DIVIDER_TEXT } from '../../../../mockData/mock';
+import { DIVIDER_TEXT } from '../../../../mock/mock';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ICreditCardsProps } from '../interfaces';
-import { absLenght } from '../formatCard';
+import { absLenght } from './formatCard';
 import { expirationDate } from 'card-validator';
 import { ExpirationDateVerification } from 'card-validator/dist/expiration-date';
 import { EXPIRY_DATE_MASK } from './masks';
