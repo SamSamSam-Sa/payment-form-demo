@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ICreditCardsProps } from '../interfaces';
-import { absLenght } from '../formatCard';
+import { absLenght } from './formatCard';
 import { Verification } from 'card-validator/dist/types';
 import { cvv } from 'card-validator';
 import MaskedInput from 'react-text-mask';

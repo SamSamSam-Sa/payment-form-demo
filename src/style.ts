@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
+import { styled } from '@mui/system';
 
-export const StyledApp = styled.div`
+export const StyledApp = styled('div')`
   height: 100%;
 `;

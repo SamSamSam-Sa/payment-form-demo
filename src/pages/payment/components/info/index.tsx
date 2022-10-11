@@ -1,8 +1,8 @@
 import React from 'react';
 import { InfoWrapper } from './style';
 import Grid from '@mui/material/Grid';
-import ProductItem from './components/ProductItem';
-import { PRODUCT_ITEMS } from '../../../../mockData/mock';
+import ProductItem from '../../../../components/ProductItem/ProductItem';
+import { PRODUCT_ITEMS } from '../../../../mock/mock';
 import Typography from '@mui/material/Typography';
 import { StyledDivider } from './style';
 

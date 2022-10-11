@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import { styled } from '@mui/system';
 import Divider from '@mui/material/Divider';
 
-export const InfoWrapper = styled.div`
+export const InfoWrapper = styled('div')`
   width: 100%;
   max-height: 100vh;
   display: flex;

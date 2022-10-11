@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@mui/system';
 import Grid from '@mui/material/Grid';
 
 export const StyledGrid = styled(Grid)`
