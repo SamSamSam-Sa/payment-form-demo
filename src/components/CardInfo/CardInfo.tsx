@@ -1,9 +1,9 @@
 import React, { createContext, useCallback, useEffect, useState } from 'react';
-import MaskedCVC from './components/MaskedCVC';
 import { StyledGrid } from './style';
 import { ICardContext, ICardProviderProps, ICreditCard } from './interfaces';
 import MaskedCardNumber from './components/MaskedCardNumber';
 import MaskedExpiryDate from './components/MaskedExpiryDate';
+import MaskedCVC from './components/MaskedCVC';
 
 export const CreditCardDataContext = createContext<ICardContext | null>(null);
 

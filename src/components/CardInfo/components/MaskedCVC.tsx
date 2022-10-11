@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ICreditCardsProps } from '../interfaces';
 import { absLenght } from '../formatCard';
-import TextField from '@mui/material/TextField';
 import { Verification } from 'card-validator/dist/types';
 import { cvv } from 'card-validator';
 import MaskedInput from 'react-text-mask';
 import { CVC_MASK } from './masks';
+import { StyledMaskedCardAdditional } from './style';
 
 const CVCMaskCustom = (props) => {
   const { inputRef, ...other } = props;
@@ -45,7 +45,7 @@ const MaskedCVC = (props: ICreditCardsProps) => {
   };
 
   return (
-    <TextField
+    <StyledMaskedCardAdditional
       name="cvc"
       error={!!help}
       margin="normal"

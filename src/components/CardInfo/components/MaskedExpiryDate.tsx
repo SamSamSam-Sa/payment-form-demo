@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ICreditCardsProps } from '../interfaces';
 import { absLenght } from '../formatCard';
-import TextField from '@mui/material/TextField';
 import { expirationDate } from 'card-validator';
 import { ExpirationDateVerification } from 'card-validator/dist/expiration-date';
 import { EXPIRY_DATE_MASK } from './masks';
 import MaskedInput from 'react-text-mask';
+import { StyledMaskedCardAdditional } from './style';
 
 const ExpiryDateMaskCustom = (props) => {
   const { inputRef, ...other } = props;
@@ -45,7 +45,7 @@ const MaskedExpiryDate = (props: ICreditCardsProps) => {
   };
 
   return (
-    <TextField
+    <StyledMaskedCardAdditional
       name="ccexp"
       error={!!help}
       margin="normal"
